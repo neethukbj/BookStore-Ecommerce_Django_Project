@@ -1,0 +1,90 @@
+{% extends 'Main/index.html' %}
+{% load static %}
+{% block content %}
+
+<div class="thankyou-page" style="background-image: url('{% static 'images/bg-03.jpg' %}');margin-top: 80px;">
+    <div class="_header">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <h1 class="ltext-101 cl2 respon2">Thank You!</h1>
+    </div>
+    
+    <div class="_body" >
+        <div class="_box">
+            <h2 class="mtext-105 cl2 txt-center p-b-30">
+                <strong>Please check your email</strong> for further instructions.
+            </h2>
+            <p class="stext-111"> 
+                Thanks a bunch for your order. It means a lot to us, just like you do! We really appreciate you giving us a moment of your time today. 
+
+            </p>
+            <p></p>
+            <div style="margin-left: 360px;margin-top: 30px;">
+           <a class=" stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 " href="{% url 'collections' %}" style="padding:17px;text-decoration: none; text-align: center">Back to homepage</a>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="_footer">
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap');
+
+.thankyou-page ._header {
+    padding: 100px 30px;
+    text-align: center;
+    background:  rgba(97, 94, 94, 0.12) center/cover no-repeat; 
+}
+.thankyou-page ._header .logo {
+    max-width: 200px;
+}
+.thankyou-page ._header .logo img {
+    width: 100%;
+}
+.thankyou-page ._header h1 {
+    font-size: 65px;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+.thankyou-page ._body {
+}
+.thankyou-page ._body ._box {
+    margin: auto;
+    max-width: 70%;
+    padding: 30px;
+    background:   #f1f1f1 ; 
+    border-radius: 3px;
+    box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+    -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+    -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.12);
+}
+.thankyou-page ._body ._box h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: green;
+}
+.thankyou-page ._footer {
+
+    padding: 50px 30px;
+}
+
+.thankyou-page ._footer .btn {
+    background: #4ab74a;
+    color: white;
+    border: 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0;
+    letter-spacing: 0.8px;
+    padding: 20px 33px;
+    text-transform: uppercase;
+}
+</style>
+
+
+{% endblock %}

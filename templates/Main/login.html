@@ -1,0 +1,485 @@
+{% extends 'Main/index.html' %}
+{% load static %}
+{% block content %}
+
+<!-- breadcrumb -->
+<div class="container" style="margin-top: 80px;">
+	<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+		<a href="{% url 'collections' %}" class="stext-109 cl8 hov-cl1 trans-04">
+			Home
+			<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+		</a>
+
+		<a href="product.html" class="stext-109 cl8 hov-cl1 trans-04">
+			Login
+			<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+		</a>
+
+	</div>
+</div>
+
+	<div id="auth" class="auth " style="width: 78%; height: 600px; margin-top: 50px; margin-right: 150px; margin-left: 150px; margin-bottom: 150px;border: 1px solid #efefef ">
+		<!-- FORM SECTION -->
+		<div class="loginrow">
+			<!-- SIGN UP -->
+			<div class="column  align-items-center flex-column  sgnup">
+				<form action="{% url 'login' %}" method="post">
+					{% csrf_token %}
+				<div class="form-wrapper align-items-center">
+
+					<div class="form sgnup">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" placeholder="Username" name="username">
+						</div>
+						<div class="input-group">
+							<i class='bx bx-mail-send'></i>
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" placeholder="Email" name="email">
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" placeholder="Password" name="pass1">
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" placeholder="Confirm password">
+						</div>
+						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit">
+							Sign up
+						</button>
+						<p>
+							<span class="stext-111 size-120">
+								Already have an account?
+							</span>
+							<b onclick="toggle()" class="pointer stext-111 size-120">
+								Log in here
+							</b>
+						</p>
+					</div>
+				</div>
+			</form>
+			</div>
+			<!-- END SIGN UP -->
+			<!-- SIGN IN -->
+			<div class="column  align-items-center flex-column  sgnin" style="background-image: url(static/images/slide-02.jpg);">
+				<form action="{% url 'login' %}" method="post">
+					{% csrf_token %}
+				<div class="form-wrapper align-items-center">
+					<div class="form sgnin">
+						<div class="input-group">
+							<i class='bx bxs-user'></i>
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" placeholder="Username" name="username">
+						</div>
+						<div class="input-group">
+							<i class='bx bxs-lock-alt'></i>
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" placeholder="Password" name="password">
+						</div>
+						<button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+							Log in
+						</button>
+						<p>
+							<b class="stext-111 size-120" >
+								Forgot password?
+							</b>
+						</p>
+						<p>
+							<span class="stext-111 size-116">
+								Don't have an account?
+							</span>
+							<b onclick="toggle()" class="pointer stext-111 size-120">
+								Sign up here
+							</b>
+						</p>
+					</div>
+				</div>
+				<div class="form-wrapper">
+		
+				</div>
+			</form>
+			</div>
+			<!-- END SIGN IN -->
+		</div>
+		<!-- END FORM SECTION -->
+		<!-- CONTENT SECTION -->
+		<div class="loginrow content-row">
+			<!-- SIGN IN CONTENT -->
+			<div class="column  flex-col" >
+				<div class="text sgnin" style="margin-top: 250px;margin-left: 150px;">
+					<h2 class="mtext-105 " >
+						One of us?
+					</h2>
+					<p class="stext-111 size-116" >Just sign in. We've missed you!</p>
+	
+				</div>
+				<div class="img sgnin">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN CONTENT -->
+			<!-- SIGN UP CONTENT -->
+			<div class="column  align-items-center flex-col">
+				<div class="img sgnup">
+				
+				</div>
+				<div class="text sgnup">
+					<h2 class="mtext-105 ">
+						New here?
+					</h2>
+					<p class="stext-111 size-116">Sign up and discover </p>
+	
+				</div>
+			</div>
+			<!-- END SIGN UP CONTENT -->
+		</div>
+		<!-- END CONTENT SECTION -->
+	</div></div>
+
+	<style>
+		:root {
+    --primary-color: #717fe0;
+    --secondary-color:#717fe0 ;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+
+
+.auth {
+    position: relative;
+    overflow: hidden;
+}
+
+.loginrow {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.column  {
+    width: 50%;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.form {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1s;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--gray-2);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: var(--gray);
+    border-radius: .5rem;
+    border: 0.125rem solid var(--white);
+    outline: none;
+}
+
+.input-group input:focus {
+    border: 0.125rem solid var(--primary-color);
+}
+
+.form button {
+    cursor: pointer;
+    width: 100%;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.form p {
+    margin: 1rem 0;
+    font-size: .7rem;
+}
+
+.flex-column  {
+    flex-direction: column  ;
+}
+
+.social-list {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1.2s;
+}
+
+.social-list>div {
+    color: var(--white);
+    margin: 0 .5rem;
+    padding: .7rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    cursor: pointer;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+}
+
+.social-list>div:nth-child(1) {
+    transition-delay: 1.4s;
+}
+
+.social-list>div:nth-child(2) {
+    transition-delay: 1.6s;
+}
+
+.social-list>div:nth-child(3) {
+    transition-delay: 1.8s;
+}
+
+.social-list>div:nth-child(4) {
+    transition-delay: 2s;
+}
+
+.social-list>div>i {
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+}
+
+.social-list>div:hover i {
+    transform: scale(1.5);
+}
+
+.facebook-bg {
+    background-color: var(--facebook-color);
+}
+
+.google-bg {
+    background-color: var(--google-color);
+}
+
+.twitter-bg {
+    background-color: var(--twitter-color);
+}
+
+.insta-bg {
+    background-color: var(--insta-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.auth.sgnin .form.sgnin,
+.auth.sgnin .social-list.sgnin,
+.auth.sgnin .social-list.sgnin>div,
+.auth.sgnup .form.sgnup,
+.auth.sgnup .social-list.sgnup,
+.auth.sgnup .social-list.sgnup>div {
+    transform: scale(1);
+}
+
+.content-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 6;
+    width: 100%;
+}
+
+.text {
+    margin: 0rem;
+    color: var(--white);
+}
+
+.text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    transition: 1s ease-in-out;
+}
+
+.text p {
+    font-weight: 600;
+    transition: 1s ease-in-out;
+    transition-delay: .2s;
+}
+
+.img img {
+    width: 30vw;
+    transition: 1s ease-in-out;
+    transition-delay: .4s;
+}
+
+.text.sgnin h2,
+.text.sgnin p,
+.img.sgnin img {
+    transform: translateX(-250%);
+}
+
+.text.sgnup h2,
+.text.sgnup p,
+.img.sgnup img {
+    transform: translateX(250%);
+}
+
+.auth.sgnin .text.sgnin h2,
+.auth.sgnin .text.sgnin p,
+.auth.sgnin .img.sgnin img,
+.auth.sgnup .text.sgnup h2,
+.auth.sgnup .text.sgnup p,
+.auth.sgnup .img.sgnup img {
+    transform: translateX(0);
+}
+
+/* BACKGROUND */
+
+.auth::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300vw;
+    transform: translate(35%, 0);
+    background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: 1s ease-in-out;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-right-radius: max(50vw, 50vh);
+    border-top-left-radius: max(50vw, 50vh);
+}
+
+.auth.sgnin::before {
+    transform: translate(0, 0);
+    right: 50%;
+}
+
+.auth.sgnup::before {
+    transform: translate(100%, 0);
+    right: 50%;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 425px) {
+
+    .auth::before,
+    .auth.sgnin::before,
+    .auth.sgnup::before {
+        height: 100vh;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        z-index: 0;
+        transform: none;
+        right: 0;
+    }
+
+    /* .container.sgnin .col.sgnup {
+        transform: translateY(100%);
+    } */
+
+    .auth.sgnin .col.sgnin,
+    .auth.sgnup .col.sgnup {
+        transform: translateY(0);
+    }
+
+    .content-row {
+        align-items: flex-start !important;
+    }
+
+    .content-row .column  {
+        transform: translateY(0);
+        background-color: unset;
+    }
+
+    .column  {
+        width: 100%;
+        position: absolute;
+        padding: 2rem;
+        background-color: var(--white);
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        transform: translateY(100%);
+        transition: 1s ease-in-out;
+    }
+
+    .loginrow {
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .form,
+    .social-list {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text {
+        margin: 0;
+    }
+
+    .text p {
+        display: none;
+    }
+
+    .text h2 {
+        margin: .5rem;
+        font-size: 2rem;
+    }
+}
+	</style>
+
+	<script>
+		let auth= document.getElementById('auth')
+
+toggle = () => {
+	auth.classList.toggle('sgnin')
+	auth.classList.toggle('sgnup')
+}
+
+setTimeout(() => {
+	auth.classList.add('sgnin')
+}, 200)
+	</script>
+	
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+{% for prod in products %}
+<a
+  class="open-prod"
+  href="{% url 'prod' prod_number=prod.inc_number %}"
+  data-popup-url="{% url 'prod' inc_number=prod.inc_number %}"
+  >{{ prod.inc_number }}</a
+>
+{% endfor %}
+{% include "prod-modal.html" %}
+{% endblock %}

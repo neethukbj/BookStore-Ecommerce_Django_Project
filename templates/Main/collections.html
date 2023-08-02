@@ -1,0 +1,455 @@
+{% extends 'Main/index.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section-slide">
+    <div class="wrap-slick1">
+        <div class="slick1">
+            <div class="item-slick1" style="background-image: url(static/images/slide-01.jpg);">
+                <div class="container h-full">
+                    <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+                        <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
+                            <span class="ltext-101 cl2 respon2">
+                                Unleash your reading passion
+                            </span>
+                        </div>
+                            
+                        <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+                            <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+                                EXPLORE AND BUY
+                            </h2>
+                        </div>
+                            
+                        <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
+                            <a href="{% url 'allbooks' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="text-decoration: none;">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-slick1" style="background-image: url(static/images/slide-02.jpg);">
+                <div class="container h-full">
+                    <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+                        <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
+                            <span class="ltext-101 cl2 respon2">
+                                Immerse yourself in the joy of reading, 
+                            </span>
+                        </div>
+                            
+                        <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
+                            <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+                                UNLOCK NEW REALM
+                             </h2>
+                        </div>
+                            
+                        <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
+                            <a href="{% url 'allbooks' %}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" style="text-decoration: none;">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Banner -->
+<div class="sec-banner bg0 p-t-80 " id="categories">
+    <div class="container">
+        <div class="p-b-10" style="padding-bottom: 50px;">
+            <h3 class="ltext-103 cl5">
+                Shop By Categories
+            </h3>
+            <p></p>
+        </div>
+        <div class="row" >
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                <!-- Block1 -->
+                <div class="block1 wrap-pic-w" style="background-color: #f1f1f1;">
+                    <img src="{% static 'images/new2.png' %}" alt="IMG-BANNER" style="max-height: 200px;">
+
+                    <a href="/fiction/?categories={{4}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3" style="text-decoration:none;">
+                        <div class="block1-txt-child1 flex-col-l">
+                            <span class="block1-name ltext-102 trans-04 p-b-8">
+                                Biographies
+                            </span>
+
+                            <span class="block1-info stext-102 trans-04">
+                                 "Inspiring Lives, Captivating Stories"
+                                
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Shop Now
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                <!-- Block1 -->
+                <div class="block1 wrap-pic-w" style="background-color: #f1f1f1;">
+                    <img src="{% static 'images/new3.png' %}" alt="IMG-BANNER" style="max-height: 200px;">
+
+                    <a href="/childrens/?categories={{2}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3" style="text-decoration:none;">
+                        <div class="block1-txt-child1 flex-col-l p-t-3 " >
+                            <span class="block1-name ltext-102 trans-04 p-b-8" >
+                                Children's Books
+                            </span>
+
+                            <span class="block1-info stext-102 trans-04">
+                                "Spark Imagination, Foster Wonder"
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Shop Now
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                <!-- Block1 -->
+                <div class="block1 wrap-pic-w" style="background-color: #f1f1f1;">
+                    <img src="{% static 'images/collage.png' %}" alt="IMG-BANNER" style="max-height: 200px;">
+
+                    <a href="/fiction/?categories={{4}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3" style="text-decoration:none;">
+                        <div class="block1-txt-child1 flex-col-l">
+                            <span class="block1-name ltext-102 trans-04 p-b-8">
+                                Literature & Fiction
+                            </span>
+
+                            <span class="block1-info stext-102 trans-04">
+                                "Escape into Imaginary Worlds"
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Shop Now
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto" >
+                <!-- Block1 -->
+                <div class="block1 wrap-pic-w" style="background-color: #f1f1f1;">
+                    <img src="{% static 'images/new6.png' %}" alt="IMG-BANNER" style="max-height: 200px;">
+
+                    <a href="/thriller/?categories={{5}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3" style="text-decoration:none;">
+                        <div class="block1-txt-child1 flex-col-l">
+                            <span class="block1-name ltext-102 trans-04 p-b-8">
+                                Mystery & Thriller
+                            </span>
+
+                            <span class="block1-info stext-102 trans-04">
+                                "Feel the Secrets and Suspense"
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Shop Now
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                <!-- Block1 -->
+                <div class="block1 wrap-pic-w" style="background-color: #f1f1f1;">
+                    <img src="{% static 'images/new4.png' %}" alt="IMG-BANNER" style="max-height: 200px;" >
+
+                    <a href="/classics/?categories={{6}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3" style="text-decoration:none;">
+                        <div class="block1-txt-child1 flex-col-l">
+                            <span class="block1-name ltext-102 trans-04 p-b-8">
+                                Classics
+                            </span>
+
+                            <span class="block1-info stext-102 trans-04">
+                                "Timeless Tales, Eternal Wisdom"
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Shop Now
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                <!-- Block1 -->
+                <div class="block1 wrap-pic-w" style="background-color: #f1f1f1;">
+                    <img src="{% static 'images/new5.png' %}" alt="IMG-BANNER" style="max-height: 200px;">
+
+                    <a href="/selfhelp/?categories={{7}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3" style="text-decoration:none;">
+                        <div class="block1-txt-child1 flex-col-l">
+                            <span class="block1-name ltext-102 trans-04 p-b-8">
+                                Self Help
+                            </span>
+
+                            <span class="block1-info stext-102 trans-04">
+                                "Empower Yourself and your Potential"
+                            </span>
+                        </div>
+
+                        <div class="block1-txt-child2 p-b-4 trans-05">
+                            <div class="block1-link stext-101 cl0 trans-09">
+                                Shop Now
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bg0 ">
+<div class="sec-product bg0 p-t-50 p-b-50">
+    <div class="container" style="width: 85%;">
+        <div class="p-b-32">
+            <h3 class="ltext-105 cl5 txt-center respon1">
+                Discover, Explore and Indulge
+            </h3>
+        </div>
+        {% for product,range,nSlides in allProds %}
+        <h4 class="block1-name mtext-105 ">{{product.0.collections}}</h4>
+        <!-- Tab01 -->
+        <div class="tab01">
+            <!-- Tab panes -->
+            <div class="tab-content ">
+                <!-- - -->
+                <div class="tab-pane fade show active" id="best-seller" role="tabpanel">
+                    <!-- Slide2 -->
+                    <div class="wrap-slick2" style="outline: none;">
+                        <div class="slick2" style="outline: none;">                    
+                      {% for i in product %}
+                            <div class="item-slick2 p-l-15 p-lr-15 p-t-15 p-b-15">
+                                <!-- Block2 -->
+                                <div class="block2" style="height: 430px;width: 240px;">
+                                    <div class="block2-pic hov-img0"  >
+                                        <img src="{{i.image.url}}" alt="IMG-PRODUCT" style="height: 350px;">
+                                        <a href="{% url 'cart_add' i.id %}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 "  style="text-decoration: none;">
+                                            Add to Cart
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="block2-txt flex-w flex-t p-t-14">
+                                        <div class="block2-txt-child1 flex-col-l ">
+                                            <a href="allbooks/book_details/{{i.id}}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"  style="text-decoration: none;">
+                                                {{i.name|truncatewords:3}}
+                                            </a>
+
+                                            <span class="stext-105 cl3">
+                                                ₹{{i.price}}
+                                               
+                                            </span>
+                                        </div>
+
+                                        <div class="block2-txt-child2 flex-r p-t-3">
+                                            <a href="{% url 'cart_add' i.id %}" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                                <img class="icon-heart1 dis-block trans-04" src="{% static 'images/icons/icon-heart-01.png' %}" alt="ICON">
+                                                <img class="icon-heart2 dis-block trans-04 ab-t-l" src="{% static 'images/icons/icon-heart-02.png' %}" alt="ICON">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+        
+
+
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="flex-c-m flex-w w-full p-t-45">
+        <a href="{% url 'allbooks' %}" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04" style="text-decoration: none;">
+            View All Books
+        </a>
+    </div>
+</div>
+<!-- Blog -->
+<div class="sec-blog bg0  p-b-50"  id="blog">
+    <div class="container">
+        <div  style="padding-bottom: 40px;">
+            <h3 class="ltext-103 cl5">
+                Our Blogs 
+            </h3>
+        </div>
+
+        <div class="row">           
+            
+
+            <div class="col-sm-6 col-md-4 ">
+                <div class="blog-item">
+                    <div class="hov-img0">
+                        <a href="blog-detail.html" style="text-decoration: none;">
+                            <img src="{% static 'images/bgimg18.jpg' %}" alt="IMG-BLOG"  style="height: 230px;">
+                        </a>
+                    </div>
+
+                    <div class="p-t-15">
+                        <div class="stext-107 flex-w p-b-14">
+                            <span class="m-r-3">
+                                <span class="cl4">
+                                    By
+                                </span>
+
+                                <span class="cl5">
+                                    BookStore
+                                </span>
+                            </span>
+
+                            <span>
+                                <span class="cl4">
+                                    on
+                                </span>
+
+                                <span class="cl5">
+                                    July 18, 2023
+                                </span>
+                            </span>
+                        </div>
+
+                        <h4 class="p-b-12">
+                            <a href="blog-detail.html" class="mtext-101 cl2 hov-cl1 trans-04" >
+                                The Joy of Reading: Unleashing the Benefits of Books
+                            </a>
+                        </h4>
+
+                        <p class="stext-108 cl6">
+                            Beyond entertainment and escape, reading offers a plethora of benefits for our minds, hearts, and overall well-being.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 ">
+                <div class="blog-item">
+                    <div class="hov-img0">
+                        <a href="blog-detail.html" style="text-decoration: none;">
+                            <img src="{% static 'images/bgimg17.jpg' %}" alt="IMG-BLOG"  style="height: 230px;">
+                        </a>
+                    </div>
+
+                    <div class="p-t-15">
+                        <div class="stext-107 flex-w p-b-14">
+                            <span class="m-r-3">
+                                <span class="cl4">
+                                    By
+                                </span>
+
+                                <span class="cl5">
+                                    Book admin
+                                </span>
+                            </span>
+
+                            <span>
+                                <span class="cl4">
+                                    on
+                                </span>
+
+                                <span class="cl5">
+                                    July 18, 2023
+                                </span>
+                            </span>
+                        </div>
+
+                        <h4 class="p-b-12">
+                            <a href="blog-detail.html" class="mtext-101 cl2 hov-cl1 trans-04" style="text-decoration: none;">
+                                Books: Portals to Infinite Worlds and Endless Possibilities
+                            </a>
+                        </h4>
+
+                        <p class="stext-108 cl6">
+                             We celebrate the power and beauty of books, exploring why they continue to captivate and enrich our lives in countless ways.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 ">
+                <div class="blog-item">
+                    <div class="hov-img0">
+                        <a href="blog-detail.html" style="text-decoration: none;">
+                            <img src="{% static 'images/bgimg19.jpg' %}" alt="IMG-BLOG" style="height: 230px;">
+                        </a>
+                    </div>
+
+                    <div class="p-t-15">
+                        <div class="stext-107 flex-w p-b-14">
+                            <span class="m-r-3">
+                                <span class="cl4">
+                                    By
+                                </span>
+
+                                <span class="cl5">
+                                    Book admin
+                                </span>
+                            </span>
+
+                            <span>
+                                <span class="cl4">
+                                    on
+                                </span>
+
+                                <span class="cl5">
+                                    July 18, 2023
+                                </span>
+                            </span>
+                        </div>
+
+                        <h4 class="p-b-12">
+                            <a href="blog-detail.html" class="mtext-101 cl2 hov-cl1 trans-04" style="text-decoration: none;">
+                                Reading Across Genres: Exploring the Diversity of Books
+
+                            </a>
+                        </h4>
+
+                        <p class="stext-108 cl6">
+                            Books are like doorways to different realms, offering a wide array of genres that cater to various interests, tastes, and moods. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
