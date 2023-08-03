@@ -9,7 +9,7 @@ BookStore is a Django Project with basic features of e-commerce web applications
 - CSS
 - jQuery
 ### API
-Razorpay
+- Razorpay
 ## Features
 - User Authntication - Register,Login wih email
 - Shopping Cart
