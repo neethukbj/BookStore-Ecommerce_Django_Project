@@ -18,3 +18,5 @@ BookStore is a Django Project with basic features of e-commerce web applications
 - Product Filtering
 - Product Sorting
 - Responsive
+## Link
+https://drive.google.com/file/d/1YSprAxIMGT9S5CCkVgYHOSwb58euFAq7/view?usp=drive_link
